@@ -225,7 +225,7 @@ public class RaceRegisterBlockEntity extends SyncedBlockEntity implements MenuPr
 
         Race race = RaceRegistry.REGISTRY.get().getValue(raceID);
         if (race != null) {
-            Umapyoi.getLogger().info("Follow up");
+            Umapyoi.getLogger().debug("Follow up");
             race.followUp(this.inventory.getStackInSlot(0));
         }
         // todo: increase uma soul status here (generic)
@@ -245,7 +245,7 @@ public class RaceRegisterBlockEntity extends SyncedBlockEntity implements MenuPr
         Race race = RaceRegistry.REGISTRY.get().getValue(raceID);
         ResourceLocation lootSpecify = new ResourceLocation(raceID.getNamespace(), "race/id/" + raceID.getPath());
         LootDataManager manager = Objects.requireNonNull(this.level.getServer()).getLootData();
-        LootTable table = manager.getLootTable(raceID);
+        LootTable table = manager.getLootTable(lootSpecify);
         if (table == LootTable.EMPTY) {
             Umapyoi.getLogger().debug("There doesn't exist a loot table for {}, falling back to generic race loot table", raceID);
             if (race == null) {
@@ -262,7 +262,7 @@ public class RaceRegisterBlockEntity extends SyncedBlockEntity implements MenuPr
 
         ObjectArrayList<ItemStack> returns = table.getRandomItems(lootParams);
         if (returns.isEmpty()) {
-            Umapyoi.getLogger().error("Rolls Empty! {}", raceID);
+            Umapyoi.getLogger().debug("Rolls Empty! {}", raceID);
             return ItemStack.EMPTY;
         }
         return returns.get(0);

@@ -63,6 +63,8 @@ public class UmapyoiCreativeGroup {
                                 return;
                             }
                             if (item == ItemRegistry.UMA_RACING_SLIP) {
+                                // UMA_RACING_SLIP is intentionally excluded from the main UMAPYOI tab
+                                // because it has its own dedicated creative tab (UMAPYOI_RACESLIPS)
                                 return;
                             }
                             output.accept(item.get());
