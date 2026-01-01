@@ -218,10 +218,10 @@ public class RaceRegisterBlockEntity extends SyncedBlockEntity implements MenuPr
         if (stack == ItemStack.EMPTY) { // sanity check
             return false;
         }
+        // Get race ID before consuming the item to avoid potential issues with empty stacks
+        ResourceLocation raceID = getRaceID(stack);
         stack.shrink(1);
         ItemStack resultStack = getResultItem();
-
-        ResourceLocation raceID = getRaceID(this.inventory.getStackInSlot(1));
 
         Race race = RaceRegistry.REGISTRY.get().getValue(raceID);
         if (race != null) {
@@ -247,7 +247,7 @@ public class RaceRegisterBlockEntity extends SyncedBlockEntity implements MenuPr
         LootDataManager manager = Objects.requireNonNull(this.level.getServer()).getLootData();
         LootTable table = manager.getLootTable(lootSpecify);
         if (table == LootTable.EMPTY) {
-            Umapyoi.getLogger().debug("There doesn't exist a loot table for {}, falling back to generic race loot table", raceID);
+            Umapyoi.getLogger().debug("There doesn't exist a loot table for {}, falling back to generic race loot table", lootSpecify);
             if (race == null) {
                 Umapyoi.getLogger().error("No such race! {}", raceID);
                 return ItemStack.EMPTY;
