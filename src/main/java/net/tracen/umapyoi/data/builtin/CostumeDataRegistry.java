@@ -14,7 +14,8 @@ public class CostumeDataRegistry {
 	
 	public static final ResourceKey<CosmeticData> KINDERGARTEN_UNIFORM = register("kindergarten_uniform");
 	public static final ResourceKey<CosmeticData> KASAMATSU_TRAINING_UNIFORM = register("kasamatsu_training_uniform");
-
+	public static final ResourceKey<CosmeticData> MENI_SHUKI_RUSH_SSHU_BLACK = register("meni_shuki_rush_sshu_black");
+	public static final ResourceKey<CosmeticData> MENI_SHUKI_RUSH_SSHU_PINK = register("meni_shuki_rush_sshu_pink");
 	
 	public static void registerAll(BootstapContext<CosmeticData> bootstrap) {
 
@@ -34,6 +35,20 @@ public class CostumeDataRegistry {
 				));
 		
 		bootstrap.register(KINDERGARTEN_UNIFORM, new CosmeticData(new ResourceLocation(Umapyoi.MODID, "kindergarten_uniform")));
+
+		bootstrap.register(MENI_SHUKI_RUSH_SSHU_BLACK, new CosmeticData(
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_black"),
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_black_flat"),
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_black"),
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_black_flat")
+		));
+
+		bootstrap.register(MENI_SHUKI_RUSH_SSHU_PINK, new CosmeticData(
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_pink"),
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_pink_flat"),
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_pink"),
+				new ResourceLocation(Umapyoi.MODID, "meni_shuki_rush_sshu_pink_flat")
+		));
 	}
 
 	private static ResourceKey<CosmeticData> register(String id) {

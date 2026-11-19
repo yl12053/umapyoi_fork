@@ -41,7 +41,8 @@ public class UmaDataTagProvider extends TagsProvider<UmaData> {
             .add(UmaDataRegistry.HARU_URARA)
             .add(UmaDataRegistry.FUJIMASA_MARCH)
             .add(UmaDataRegistry.AGNES_DIGITAL)
-            .add(UmaDataRegistry.STARDUST);
+            .add(UmaDataRegistry.STARDUST)
+            .add(UmaDataRegistry.CHRONO_GENESIS);
         this.tag(UmapyoiUmaDataTags.TANNED_SKIN).add(UmaDataRegistry.DARLEY_ARABIAN).add(UmaDataRegistry.HISHI_AMAZON);
         this.tag(UmapyoiUmaDataTags.STUCK_MODEL);
         this.tag(UmapyoiUmaDataTags.ALTER_MODEL).add(UmaDataRegistry.AGNES_DIGITAL).add(UmaDataRegistry.TRANSCEND);

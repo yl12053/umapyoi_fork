@@ -225,6 +225,16 @@
   "umadata.umapyoi.dantsu_flame": "烈焰快駒",
   
   "umadata.umapyoi.ines_fujin": "艾尼斯風神",
+
+  "umadata.umapyoi.chrono_genesis": "時代創世",
+  "umadata.umapyoi.daring_tact": "謀勇兼備",
+  "umadata.umapyoi.eishin_flash_swim": "[Reines Plätschern] 榮進閃耀",
+  "umadata.umapyoi.forever_young": "青春永駐",
+  "umadata.umapyoi.gran_alegria": "放聲歡呼",
+  "umadata.umapyoi.loves_only_you": "唯獨愛你",
+  "umadata.umapyoi.mejiro_dober": "目白多伯",
+  "umadata.umapyoi.tosen_jordan": "島川喬登",
+  "umadata.umapyoi.tsurumaru_tsuyoshi": "鶴丸強志",
   
   "support_card.umapyoi.ssr_kiryuuin_aoi.name": "[共行同一條路！] 桐生院葵",
   "support_card.umapyoi.ssr_anime_main.name": "[今後也會！] 不斷銘刻之人",
@@ -350,6 +360,8 @@
   "item.umapyoi.kindergarten_uniform.name": "幼兒園服飾",
   "item.umapyoi.starting_future.name": "Starting Future",
   "item.umapyoi.kasamatsu_training_uniform.name": "笠松特雷森訓練服",
+  "item.umapyoi.meni_shuki_rush_sshu_black.name": "超超喜翻♡衝衝衝！",
+  "item.umapyoi.meni_shuki_rush_sshu_pink.name": "超超喜翻♡衝衝衝！",
   
   "tooltip.umapyoi.umafactor.data": "擁有%s（等）總共%d個因子",
   "tooltip.umapyoi.uma_soul.ranking": "評級：%s",

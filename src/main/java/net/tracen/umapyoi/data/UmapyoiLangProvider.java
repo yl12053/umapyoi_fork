@@ -61,6 +61,8 @@ public class UmapyoiLangProvider extends AbstractLangProvider {
         addCostume(CostumeDataRegistry.STARTING_FUTURE, "Starting Future Costume");
         addCostume(CostumeDataRegistry.KINDERGARTEN_UNIFORM, "Kindergarten Uniform");
         addCostume(CostumeDataRegistry.KASAMATSU_TRAINING_UNIFORM, "Kasamatsu Tracen Training Uniform");
+        addCostume(CostumeDataRegistry.MENI_SHUKI_RUSH_SSHU_BLACK, "Super Suki♡Shuki Rush!");
+        addCostume(CostumeDataRegistry.MENI_SHUKI_RUSH_SSHU_PINK, "Super Suki♡Shuki Rush!");
 
         add(ItemRegistry.SPEED_LOW_ITEM.get(), "Speed Notepad");
         add(ItemRegistry.SPEED_MID_ITEM.get(), "Speed Writings");
@@ -616,9 +618,19 @@ public class UmapyoiLangProvider extends AbstractLangProvider {
         
         addUma(UmaDataRegistry.INES_FUJIN, "Ines Fujin");
 
+        addUma(UmaDataRegistry.CHRONO_GENESIS, "Chrono Genesis");
+        addUma(UmaDataRegistry.DARING_TACT, "Daring Tact");
+        addUma(UmaDataRegistry.EISHIN_FLASH_SWIM, "[Reines Plätschern] Eishin Flash");
+        addUma(UmaDataRegistry.FOREVER_YOUNG, "Forever Young");
+        addUma(UmaDataRegistry.GRAN_ALEGRIA, "Gran Alegria");
+        addUma(UmaDataRegistry.LOVES_ONLY_YOU, "Loves Only You");
+        addUma(UmaDataRegistry.MEJIRO_DOBER, "Mejiro Dober");
+        addUma(UmaDataRegistry.TOSEN_JORDAN, "Tosen Jordan");
+        addUma(UmaDataRegistry.TSURUMARU_TSUYOSHI, "Tsurumaru Tsuyoshi");
+        addUma(UmaDataRegistry.WINNING_TICKET, "Winning Ticket");
+
         add(Util.makeDescriptionId("umadata", new ResourceLocation(Umapyoi.MODID, "super_creek")), "Super Creek");
 
-        add(Util.makeDescriptionId("umadata", new ResourceLocation(Umapyoi.MODID, "winning_ticket")), "Winning Ticket");
         add(Util.makeDescriptionId("umadata", new ResourceLocation(Umapyoi.MODID, "orfevre")), "Orfevre");
 
         add(Util.makeDescriptionId("umadata", new ResourceLocation(Umapyoi.MODID, "kiryuuin_aoi")), "Kiryuuin Aoi");
