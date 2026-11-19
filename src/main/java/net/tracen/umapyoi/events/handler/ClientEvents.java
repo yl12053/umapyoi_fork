@@ -6,6 +6,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import cn.mcmod_mmf.mmlib.utils.ClientUtil;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceKey;
@@ -20,6 +21,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderArmEvent;
 import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 import net.tracen.umapyoi.api.UmapyoiAPI;
+import net.tracen.umapyoi.client.RenderUtil;
 import net.tracen.umapyoi.client.model.UmaCostumeModelUtils;
 import net.tracen.umapyoi.client.model.UmaPlayerModel;
 import net.tracen.umapyoi.data.tag.UmapyoiCostumeDataTags;
@@ -92,7 +94,7 @@ public class ClientEvents {
                     OverlayTexture.NO_OVERLAY);
             if(baseModel.isEmissive()) {
                 VertexConsumer emissiveConsumer = event.getMultiBufferSource()
-                        .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(name)));
+                        .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(name)));
                 baseModel.rightArm.renderEmissive(event.getPoseStack(), emissiveConsumer, event.getPackedLight(),
                         OverlayTexture.NO_OVERLAY);
             }
@@ -104,7 +106,7 @@ public class ClientEvents {
                     OverlayTexture.NO_OVERLAY);
             if(baseModel.isEmissive()) {
                 VertexConsumer emissiveConsumer = event.getMultiBufferSource()
-                        .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(name)));
+                        .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(name)));
                 baseModel.leftArm.renderEmissive(event.getPoseStack(), emissiveConsumer, event.getPackedLight(),
                         OverlayTexture.NO_OVERLAY);
             }

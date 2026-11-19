@@ -16,6 +16,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.NeoForge;
+import net.tracen.umapyoi.client.RenderUtil;
 import net.tracen.umapyoi.client.model.UmaPlayerModel;
 import net.tracen.umapyoi.data.tag.UmapyoiUmaDataTags;
 import net.tracen.umapyoi.events.client.RenderingUmaSoulEvent;
@@ -78,7 +79,7 @@ public class UmaSoulRenderer implements ICurioRenderer {
                 LivingEntityRenderer.getOverlayCoords(entity, 0.0F));
         if(baseModel.isEmissive()) {
             VertexConsumer emissiveConsumer = renderTypeBuffer
-                    .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(renderTarget)));
+                    .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(renderTarget)));
             baseModel.renderEmissiveParts(matrixStack, emissiveConsumer, light,
                     LivingEntityRenderer.getOverlayCoords(entity, 0.0F), -1);
         }
