@@ -18,6 +18,7 @@ import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.tracen.umapyoi.api.UmapyoiAPI;
+import net.tracen.umapyoi.client.RenderUtil;
 import net.tracen.umapyoi.client.model.UmaCostumeModelUtils;
 import net.tracen.umapyoi.client.model.UmaPlayerModel;
 import net.tracen.umapyoi.data.tag.UmapyoiCostumeDataTags;
@@ -91,24 +92,24 @@ public class ClientEvents {
 		    baseModel.rightArm.x -=1F;
 		    baseModel.rightArm.render(event.getPoseStack(), vertexconsumer, event.getPackedLight(),
 		            OverlayTexture.NO_OVERLAY);
-		    if(baseModel.isEmissive()) {
-		        VertexConsumer emissiveConsumer = event.getMultiBufferSource()
-		                .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(name)));
-		        baseModel.rightArm.renderEmissive(event.getPoseStack(), emissiveConsumer, event.getPackedLight(),
-		                OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
-		    }
+            if(baseModel.isEmissive()) {
+                VertexConsumer emissiveConsumer = event.getMultiBufferSource()
+                        .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(name)));
+                baseModel.rightArm.renderEmissive(event.getPoseStack(), emissiveConsumer, event.getPackedLight(),
+                        OverlayTexture.NO_OVERLAY);
+            }
 		    baseModel.rightArm.x +=1F;
 		} else {
 		    baseModel.leftArm.xRot = 0.0F;
 		    baseModel.leftArm.x +=1F;
 		    baseModel.leftArm.render(event.getPoseStack(), vertexconsumer, event.getPackedLight(),
 		            OverlayTexture.NO_OVERLAY);
-		    if(baseModel.isEmissive()) {
-		        VertexConsumer emissiveConsumer = event.getMultiBufferSource()
-		                .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(name)));
-		        baseModel.leftArm.renderEmissive(event.getPoseStack(), emissiveConsumer, event.getPackedLight(),
-		                OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
-		    }
+            if(baseModel.isEmissive()) {
+                VertexConsumer emissiveConsumer = event.getMultiBufferSource()
+                        .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(name)));
+                baseModel.leftArm.renderEmissive(event.getPoseStack(), emissiveConsumer, event.getPackedLight(),
+                        OverlayTexture.NO_OVERLAY);
+            }
 		    baseModel.leftArm.x -=1F;
 		}
 	}

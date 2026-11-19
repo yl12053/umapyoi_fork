@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.tracen.umapyoi.api.UmapyoiAPI;
+import net.tracen.umapyoi.client.RenderUtil;
 import net.tracen.umapyoi.client.model.UmaCostumeModelUtils;
 import net.tracen.umapyoi.client.model.UmaPlayerModel;
 import net.tracen.umapyoi.utils.ClientUtils;
@@ -77,7 +78,7 @@ public class SBWCompat {
                     OverlayTexture.NO_OVERLAY);
             if(baseModel.isEmissive()) {
                 VertexConsumer emissiveConsumer = event.getCurrentBuffer()
-                        .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(name)));
+                        .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(name)));
                 baseModel.rightArm.renderEmissive(event.getStack(), emissiveConsumer, event.getPackedLightIn(),
                         OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
             }
@@ -105,7 +106,7 @@ public class SBWCompat {
                     OverlayTexture.NO_OVERLAY);
             if(baseModel.isEmissive()) {
                 VertexConsumer emissiveConsumer = event.getCurrentBuffer()
-                        .getBuffer(RenderType.entityTranslucentEmissive(ClientUtils.getEmissiveTexture(name)));
+                        .getBuffer(RenderUtil.CustomEmissive(ClientUtils.getEmissiveTexture(name)));
                 baseModel.leftArm.renderEmissive(event.getStack(), emissiveConsumer, event.getPackedLightIn(),
                         OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
             }

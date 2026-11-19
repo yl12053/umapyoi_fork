@@ -24,12 +24,8 @@ import java.util.List;
 import cn.mcmod_mmf.mmlib.client.model.BedrockHumanoidModel;
 import cn.mcmod_mmf.mmlib.client.model.bedrock.BedrockPart;
 import cn.mcmod_mmf.mmlib.client.model.pojo.BedrockModelPOJO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class UmaPlayerModel<T extends LivingEntity> extends BedrockHumanoidModel<T> {
-
-    private static final Logger log = LoggerFactory.getLogger(UmaPlayerModel.class);
     public BedrockPart rightArmDown;
     public BedrockPart leftArmDown;
     public BedrockPart rightLegDown;
@@ -63,7 +59,7 @@ public class UmaPlayerModel<T extends LivingEntity> extends BedrockHumanoidModel
     @Override
     public void loadModel(BedrockModelPOJO pojo) {
         super.loadModel(pojo);
-        
+
         this.rightArmDown = this.getChild("right_arm_down");
         this.leftArmDown = this.getChild("left_arm_down");
         this.rightLegDown = this.getChild("right_leg_down");

@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,6 +21,8 @@ import net.tracen.umapyoi.Umapyoi;
 import net.tracen.umapyoi.block.BlockRegistry;
 import net.tracen.umapyoi.block.UmaStatueBlock;
 import net.tracen.umapyoi.block.entity.UmaStatueBlockEntity;
+import net.tracen.umapyoi.client.RenderUtil;
+import net.tracen.umapyoi.client.model.UmaPlayerModel;
 import net.tracen.umapyoi.client.renderer.AbstractSuitRenderer;
 import net.tracen.umapyoi.data.tag.UmapyoiCostumeDataTags;
 import net.tracen.umapyoi.data.tag.UmapyoiUmaDataTags;
@@ -39,12 +42,12 @@ import static net.tracen.umapyoi.client.renderer.UmaSoulRenderer.getSuitTarget;
 
 public class UmaStatuesBlockRender implements BlockEntityRenderer<UmaStatueBlockEntity> {
     public static final ResourceLocation TEXTURE = new ResourceLocation(Umapyoi.MODID, "textures/model/three_goddesses.png");
-    private final SimpleBedrockModel model;
-    private final SimpleBedrockModel costumeModel;
+    private final UmaPlayerModel<LivingEntity> model;
+    private final UmaPlayerModel<LivingEntity> costumeModel;
 
     public UmaStatuesBlockRender(BlockEntityRendererProvider.Context context) {
-        model = new SimpleBedrockModel();
-        costumeModel = new SimpleBedrockModel();
+        model = new UmaPlayerModel<>();
+        costumeModel = new UmaPlayerModel<>();
     }
     
     
@@ -151,16 +154,22 @@ public class UmaStatuesBlockRender implements BlockEntityRenderer<UmaStatueBlock
         VertexConsumer vertexConsumer = buffer
                 .getBuffer(RenderType.entityTranslucent(tileEntity.isEmpty() ? TEXTURE : ClientUtils.getTexture(target)));
         model.renderToBuffer(poseStack, vertexConsumer, combinedLight, combinedOverlay, 1, 1, 1, 1);
-        
+
         if(model.isEmissive()) {
             VertexConsumer emissiveConsumer = buffer
-                    .getBuffer(RenderType.entityTranslucentEmissive(tileEntity.isEmpty() ? TEXTURE : ClientUtils.getEmissiveTexture(target)));
+                    .getBuffer(RenderUtil.CustomEmissive(tileEntity.isEmpty() ? TEXTURE : ClientUtils.getEmissiveTexture(target)));
             model.renderEmissiveParts(poseStack, emissiveConsumer, combinedLight, combinedOverlay, 1, 1, 1, 1);
         }
 
         if (doRenderSuit) {
             VertexConsumer vertexConsumerSuit = buffer.getBuffer(RenderType.entityTranslucentCull(costumeResource));
             costumeModel.renderToBuffer(poseStack, vertexConsumerSuit, combinedLight, combinedOverlay, 1, 1, 1, 1);
+
+            if (costumeModel.isEmissive()) {
+                VertexConsumer emissiveConsumer = buffer
+                        .getBuffer(RenderUtil.CustomEmissive(costumeResource));
+                costumeModel.renderEmissiveParts(poseStack, emissiveConsumer, combinedLight, combinedOverlay, 1, 1, 1, 1);
+            }
         }
 
         poseStack.popPose();
@@ -175,5 +184,4 @@ public class UmaStatuesBlockRender implements BlockEntityRenderer<UmaStatueBlock
         Optional.ofNullable(model.getChild("body")).ifPresent(i -> i.visible = visible);
         Optional.ofNullable(model.getChild("hat")).ifPresent(v -> v.visible = visible);
     }
-
 }
