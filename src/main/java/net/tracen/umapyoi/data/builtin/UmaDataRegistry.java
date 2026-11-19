@@ -151,6 +151,17 @@ public class UmaDataRegistry {
     public static final ResourceKey<UmaData> KISEKI = register("kiseki");
     public static final ResourceKey<UmaData> MEJIRO_RAMONU = register("mejiro_ramonu");
 
+    public static final ResourceKey<UmaData> CHRONO_GENESIS = register("chrono_genesis");
+    public static final ResourceKey<UmaData> DARING_TACT = register("daring_tact");
+    public static final ResourceKey<UmaData> EISHIN_FLASH_SWIM = register("eishin_flash_swim");
+    public static final ResourceKey<UmaData> FOREVER_YOUNG = register("forever_young");
+    public static final ResourceKey<UmaData> GRAN_ALEGRIA = register("gran_alegria");
+    public static final ResourceKey<UmaData> LOVES_ONLY_YOU = register("loves_only_you");
+    public static final ResourceKey<UmaData> MEJIRO_DOBER = register("mejiro_dober");
+    public static final ResourceKey<UmaData> TOSEN_JORDAN = register("tosen_jordan");
+    public static final ResourceKey<UmaData> TSURUMARU_TSUYOSHI = register("tsurumaru_tsuyoshi");
+    public static final ResourceKey<UmaData> WINNING_TICKET = register("winning_ticket");
+
     public static void registerAll(BootstrapContext<UmaData> bootstrap) {
 
         bootstrap.register(AGNES_DIGITAL, UmaData.createNewUmamusume("agnes_digital", GachaRanking.SR, new int[] {8, 8, 7, 0, 7}, new Aptitude[]{Aptitude.A, Aptitude.A, Aptitude.F, Aptitude.A, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
@@ -297,6 +308,16 @@ public class UmaDataRegistry {
         bootstrap.register(KISEKI, UmaData.createNewUmamusume("kiseki", GachaRanking.SR, new int[] {10, 0, 0, 10, 10}, new Aptitude[]{Aptitude.A, Aptitude.G, Aptitude.G, Aptitude.C, Aptitude.A, Aptitude.A}, Position.FRONT_RUNNER)); // front runner / late surger
         bootstrap.register(MEJIRO_RAMONU, UmaData.createNewUmamusume("mejiro_ramonu", GachaRanking.SR, new int[] {15, 0, 0, 0, 15}, new Aptitude[]{Aptitude.A, Aptitude.F, Aptitude.B, Aptitude.A, Aptitude.A, Aptitude.E}, Position.PACE_CHASER)); // pace chaser / late surger
 
+        bootstrap.register(CHRONO_GENESIS, UmaData.createNewUmamusume("chrono_genesis", GachaRanking.SR, new int[] {10, 10, 0, 10, 0}, new Aptitude[] {Aptitude.G, Aptitude.B, Aptitude.A, Aptitude.A, Aptitude.A, Aptitude.G}, Position.PACE_CHASER));
+        bootstrap.register(DARING_TACT, UmaData.createNewUmamusume("daring_tact", GachaRanking.SR, new int[] {0, 0, 10, 10, 10}, new Aptitude[] {Aptitude.F, Aptitude.A, Aptitude.A, Aptitude.F, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
+        bootstrap.register(EISHIN_FLASH_SWIM, UmaData.createNewUmamusume("eishin_flash", GachaRanking.SSR, new int[] {0, 20, 0, 10, 10}, new Aptitude[] {Aptitude.G, Aptitude.F, Aptitude.A, Aptitude.A, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
+        bootstrap.register(FOREVER_YOUNG, UmaData.createNewUmamusume("forever_young", GachaRanking.SR, new int[] {0, 0, 0, 0, 0}, new Aptitude[] {Aptitude.G, Aptitude.A, Aptitude.A, Aptitude.G, Aptitude.G, Aptitude.A}, Position.PACE_CHASER)); // Place holder only!
+        bootstrap.register(GRAN_ALEGRIA, UmaData.createNewUmamusume("gran_alegria", GachaRanking.SR, new int[] {0, 0, 10, 20, 0}, new Aptitude[] {Aptitude.A, Aptitude.A, Aptitude.C, Aptitude.G, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
+        bootstrap.register(LOVES_ONLY_YOU, UmaData.createNewUmamusume("loves_only_you", GachaRanking.SR, new int[] {10, 10, 0, 10, 0}, new Aptitude[] {Aptitude.G, Aptitude.C, Aptitude.A, Aptitude.F, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
+        bootstrap.register(MEJIRO_DOBER, UmaData.createNewUmamusume("mejiro_dober", GachaRanking.SR, new int[] {10, 0, 0, 0, 20}, new Aptitude[] {Aptitude.E, Aptitude.A, Aptitude.A, Aptitude.F, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
+        bootstrap.register(TOSEN_JORDAN, UmaData.createNewUmamusume("tosen_jordan", GachaRanking.SR, new int[] {10, 0, 10, 10, 0}, new Aptitude[] {Aptitude.G, Aptitude.F, Aptitude.A, Aptitude.B, Aptitude.A, Aptitude.G}, Position.PACE_CHASER));
+        bootstrap.register(TSURUMARU_TSUYOSHI, UmaData.createNewUmamusume("tsurumaru_tsuyoshi", GachaRanking.SR, new int[] {0, 0, 20, 10, 0}, new Aptitude[] {Aptitude.F, Aptitude.D, Aptitude.A, Aptitude.C, Aptitude.A, Aptitude.F}, Position.PACE_CHASER));
+        bootstrap.register(WINNING_TICKET, UmaData.createNewUmamusume("winning_ticket", GachaRanking.SR, new int[] {0, 10, 20, 0, 0}, new Aptitude[] {Aptitude.G, Aptitude.F, Aptitude.A, Aptitude.B, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
     }
 
     private static ResourceKey<UmaData> register(String id) {

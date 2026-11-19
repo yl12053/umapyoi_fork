@@ -1,0 +1,23 @@
+{
+  "distance_aptitude": [
+    6,
+    5,
+    6,
+    0
+  ],
+  "identifier": "umapyoi:winning_ticket",
+  "position": "late_surger",
+  "propertyRate": [
+    0,
+    10,
+    20,
+    0,
+    0
+  ],
+  "ranking": "sr",
+  "surface_aptitude": [
+    0,
+    1,
+    5
+  ]
+}

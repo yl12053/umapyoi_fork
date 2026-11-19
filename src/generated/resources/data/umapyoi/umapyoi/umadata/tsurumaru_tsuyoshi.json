@@ -1,0 +1,23 @@
+{
+  "distance_aptitude": [
+    6,
+    4,
+    6,
+    1
+  ],
+  "identifier": "umapyoi:tsurumaru_tsuyoshi",
+  "position": "pace_chaser",
+  "propertyRate": [
+    0,
+    0,
+    20,
+    10,
+    0
+  ],
+  "ranking": "sr",
+  "surface_aptitude": [
+    1,
+    3,
+    5
+  ]
+}
