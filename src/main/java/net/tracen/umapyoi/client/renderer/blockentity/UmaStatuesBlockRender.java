@@ -144,6 +144,8 @@ public class UmaStatuesBlockRender implements BlockEntityRenderer<UmaStatueBlock
             } else {
                 Optional.ofNullable(model.getChild("hat")).ifPresent(v -> v.visible = true);
             }
+            model.setLeftEarVisible(costumeModel.getChild("left_earmuffs_costume").isEmpty());
+            model.setRightEarVisible(costumeModel.getChild("right_earmuffs_costume").isEmpty());
         } else {
             setAllVisible(true);
             model.getModelMap().entrySet().stream()

@@ -629,6 +629,11 @@ public class UmapyoiLangProvider extends AbstractLangProvider {
         addUma(UmaDataRegistry.TSURUMARU_TSUYOSHI, "Tsurumaru Tsuyoshi");
         addUma(UmaDataRegistry.WINNING_TICKET, "Winning Ticket");
 
+        addUma(UmaDataRegistry.FUSAICHI_PANDORA_SWIM, "[Snatchin' Hearts ♡] Fusaichi Pandora");
+        addUma(UmaDataRegistry.IKUNO_DICTUS, "Ikuno Dictus");
+        addUma(UmaDataRegistry.SEIUN_SKY_SWIM, "[Whimsical Orange of the Shore] Seiun Sky");
+        addUma(UmaDataRegistry.PHALAENOPSIS, "Phalaenopsis");
+
         add(Util.makeDescriptionId("umadata", new ResourceLocation(Umapyoi.MODID, "super_creek")), "Super Creek");
 
         add(Util.makeDescriptionId("umadata", new ResourceLocation(Umapyoi.MODID, "orfevre")), "Orfevre");
