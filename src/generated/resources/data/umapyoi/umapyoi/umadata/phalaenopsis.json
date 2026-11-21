@@ -1,0 +1,23 @@
+{
+  "distance_aptitude": [
+    6,
+    1,
+    6,
+    1
+  ],
+  "identifier": "umapyoi:phalaenopsis",
+  "position": "pace_chaser",
+  "propertyRate": [
+    0,
+    10,
+    10,
+    10,
+    0
+  ],
+  "ranking": "sr",
+  "surface_aptitude": [
+    3,
+    6,
+    5
+  ]
+}

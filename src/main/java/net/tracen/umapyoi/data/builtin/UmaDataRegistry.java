@@ -162,6 +162,11 @@ public class UmaDataRegistry {
     public static final ResourceKey<UmaData> TSURUMARU_TSUYOSHI = register("tsurumaru_tsuyoshi");
     public static final ResourceKey<UmaData> WINNING_TICKET = register("winning_ticket");
 
+    public static final ResourceKey<UmaData> FUSAICHI_PANDORA_SWIM = register("fusaichi_pandora_swim");
+    public static final ResourceKey<UmaData> IKUNO_DICTUS = register("ikuno_dictus");
+    public static final ResourceKey<UmaData> SEIUN_SKY_SWIM = register("seiun_sky_swim");
+    public static final ResourceKey<UmaData> PHALAENOPSIS = register("phalaenopsis");
+
     public static void registerAll(BootstrapContext<UmaData> bootstrap) {
 
         bootstrap.register(AGNES_DIGITAL, UmaData.createNewUmamusume("agnes_digital", GachaRanking.SR, new int[] {8, 8, 7, 0, 7}, new Aptitude[]{Aptitude.A, Aptitude.A, Aptitude.F, Aptitude.A, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
@@ -318,6 +323,11 @@ public class UmaDataRegistry {
         bootstrap.register(TOSEN_JORDAN, UmaData.createNewUmamusume("tosen_jordan", GachaRanking.SR, new int[] {10, 0, 10, 10, 0}, new Aptitude[] {Aptitude.G, Aptitude.F, Aptitude.A, Aptitude.B, Aptitude.A, Aptitude.G}, Position.PACE_CHASER));
         bootstrap.register(TSURUMARU_TSUYOSHI, UmaData.createNewUmamusume("tsurumaru_tsuyoshi", GachaRanking.SR, new int[] {0, 0, 20, 10, 0}, new Aptitude[] {Aptitude.F, Aptitude.D, Aptitude.A, Aptitude.C, Aptitude.A, Aptitude.F}, Position.PACE_CHASER));
         bootstrap.register(WINNING_TICKET, UmaData.createNewUmamusume("winning_ticket", GachaRanking.SR, new int[] {0, 10, 20, 0, 0}, new Aptitude[] {Aptitude.G, Aptitude.F, Aptitude.A, Aptitude.B, Aptitude.A, Aptitude.G}, Position.LATE_SURGER));
+
+        bootstrap.register(FUSAICHI_PANDORA_SWIM, UmaData.createNewUmamusume("fusaichi_pandora", GachaRanking.SSR, new int[] { 0, 0, 14, 8, 8 }, new Aptitude[] { Aptitude.G, Aptitude.B, Aptitude.A, Aptitude.G, Aptitude.A, Aptitude.E }, Position.PACE_CHASER));
+        bootstrap.register(IKUNO_DICTUS, UmaData.createNewUmamusume("ikuno_dictus", GachaRanking.SR, new int[] { 0, 0, 0, 20, 10 }, new Aptitude[] { Aptitude.D, Aptitude.A, Aptitude.A, Aptitude.D, Aptitude.A, Aptitude.G }, Position.PACE_CHASER));
+        bootstrap.register(SEIUN_SKY_SWIM, UmaData.createNewUmamusume("seiun_sky", GachaRanking.SSR, new int[] { 0, 0, 5, 10, 15 }, new Aptitude[] { Aptitude.G, Aptitude.C, Aptitude.A, Aptitude.A, Aptitude.A, Aptitude.G }, Position.FRONT_RUNNER));
+        bootstrap.register(PHALAENOPSIS, UmaData.createNewUmamusume("phalaenopsis", GachaRanking.SR, new int[] { 0, 10, 10, 10, 0 }, new Aptitude[] { Aptitude.D, Aptitude.A, Aptitude.A, Aptitude.F, Aptitude.A, Aptitude.F }, Position.PACE_CHASER));
     }
 
     private static ResourceKey<UmaData> register(String id) {

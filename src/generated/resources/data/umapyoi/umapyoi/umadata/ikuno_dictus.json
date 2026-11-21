@@ -1,0 +1,23 @@
+{
+  "distance_aptitude": [
+    6,
+    3,
+    6,
+    0
+  ],
+  "identifier": "umapyoi:ikuno_dictus",
+  "position": "pace_chaser",
+  "propertyRate": [
+    0,
+    0,
+    0,
+    20,
+    10
+  ],
+  "ranking": "sr",
+  "surface_aptitude": [
+    3,
+    6,
+    5
+  ]
+}

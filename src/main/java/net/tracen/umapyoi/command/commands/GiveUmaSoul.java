@@ -331,11 +331,12 @@ public class GiveUmaSoul {
             }
         }
 
+        var name = UmaSoulUtils.getTranslatedUmaName(umaSoul);
         if (!player.getInventory().add(umaSoul)) {
             player.drop(umaSoul, false);
         }
 
-        ctx.getSource().sendSuccess(() -> Component.translatable("umapyoi.command.give.success", player.getName(), UmaSoulUtils.getTranslatedUmaName(umaSoul)), true);
+        ctx.getSource().sendSuccess(() -> Component.translatable("umapyoi.command.give.success", player.getName(), name), true);
         return 1;
     }
 }
